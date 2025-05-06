@@ -3,12 +3,10 @@ import { useState, useEffect } from 'react';
 export default function Header() {
   const [currentSlide, setCurrentSlide] = useState(1);
 
-  // Funzione per gestire il cambiamento automatico delle slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev % 4) + 1);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -19,25 +17,25 @@ export default function Header() {
           id="slide1"
           className={`carousel-item relative w-full ${currentSlide === 1 ? 'block' : 'hidden'}`}
         >
-          <img src="\src\images\Assassin_s_Creed_Shadows.webp" className="w-full" />
+          <img src="/Assassin_s_Creed_Shadows.webp" className="w-full" alt="Slide 1" />
         </div>
         <div
           id="slide2"
           className={`carousel-item relative w-full ${currentSlide === 2 ? 'block' : 'hidden'}`}
         >
-          <img src="\src\images\Split_Fiction.webp" className="w-full" />
+          <img src="/Split_Fiction.webp" className="w-full" alt="Slide 2" />
         </div>
         <div
           id="slide3"
           className={`carousel-item relative w-full ${currentSlide === 3 ? 'block' : 'hidden'}`}
         >
-          <img src="\src\images\Witcher_four.webp" className="w-full" />
+          <img src="/Witcher_four.webp" className="w-full" alt="Slide 3" />
         </div>
         <div
           id="slide4"
           className={`carousel-item relative w-full ${currentSlide === 4 ? 'block' : 'hidden'}`}
         >
-          <img src="\src\images\inzoi-pc-gioco-steam-cover.webp" className="w-full" />
+          <img src="/inzoi-pc-gioco-steam-cover.webp" className="w-full" alt="Slide 4" />
         </div>
       </div>
 
